@@ -1,0 +1,73 @@
+#Seminar 1
+
+Mediul de lucru: Visual Studio 2013 (VS 2013 Community - pentru acasa)
+2017?
+
+##TO DO:
+1. Creare aplicatie consola
+2. Operatorul sizeof
+3. Recapitulare pointeri si referinte. Exemplu: interschimbare.
+4. Utilizarea debugger-ului.
+
+## Creare aplicatie consola
+File -> New -> Project -> Templates -> Visual C++ -> Win32 Console Application
+
+Sistemul de intrare/iesire in C++
+	-> Variabile initializate global
+		-> cin
+		-> cout
+	-> Operatori
+		-> intrare >>
+		-> iesire <<
+		Apel: 
+			cout<<"Mesaj afisat la consola!"<<endl;
+			std::cout<<"Al doilea mesaj!";
+				-> :: = operatorul de rezolutie
+
+## Operatorul sizeof
+Operatorul sizeof determina dimensiunea in bytes a unei variabile sau a unui tip de data.
+Bit vs byte? Octet?
+
+Ex: 
+char -> 1 byte
+int -> 4 bytes
+short int -> 2 bytes
+long int -> 4 bytes
+float -> 4 bytes
+double -> 8 bytes
+long double -> 8 bytes
+bool -> 1 byte
+
+## Recapitulare pointeri si referinte. Exemplu: interschimbare.
+Pointer:
+	-> variabila care contine adresa unei alte variabile de tip bine precizat.
+	-> definirea unui pointer se face cu ajutorul operatorului de indirectare *.
+	int x, *px;
+	px = &x; --> & extrage adresa variabilei x
+	*px == x --> TRUE, * extrage continutul de la adresa stocata in pointerul px.
+	
+	### Definirea unui pointer constant
+	tip * const nume;
+	Ex: int * const px;
+	Operatiile de tipul: nume++, nume--, nume= ...  nu sunt permise.
+
+	### Definirea unui pointer la o zona de memorie constanta
+	tip const * nume;
+	Ex: int const * px;
+	Continutul zonei de memorie referita de pointer nu poate fi alterat -> *nume = 2; nu este permis
+	
+Referinta:
+	-> stocheaza adresa unei variabile
+	-> alias pentru variabila asociata
+	-> se initializeaza la definire
+	-> nu poate fi modificata ulterior
+	-> utila in transmiterea parametrilor functiilor
+	tip & ref = variabilaDefinitaAnterior;
+
+## Utilizarea debugger-ului.
+1. Definirea unui breakpoint.
+2. Rularea programului in Debug mode (F5).
+3. Navigarea intre instructiuni cu F10 (Step over) si F11 (Step into).
+4. Vizualizarea adreselor de memorie: Debug -> Windows -> Memory -> Memory 1.
+5. Debug -> Stop Debugging. 
+
