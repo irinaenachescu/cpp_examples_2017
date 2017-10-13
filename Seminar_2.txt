@@ -1,0 +1,29 @@
+#Seminar 2 - Recapitulare lucru cu structuri
+
+Cum dezalocam memoria?
+	delete  --> pentru a elibera memoria ocupata de un singur obiect
+	delete [] --> pentru a elibera memoria ocupata in heap de un vector
+Atentie! Pentru fiecare new (care aloca memorie in heap) trebuie sa existe
+un delete.
+
+Memory leak = apare atunci cand o zona de memorie alocata in prealabil
+de programator nu este dezalocata corespunzator.
+
+Exercitiu:
+Sa se creeze structura Hotel cu campurile
+	id - de tip intreg
+	nume - sir de caractere definit dinamic (pointer la char)
+	adresa - sir de caractere definit static, de maxim 100 de caractere
+	rating - un caracter care pastreaza numarul de stele (1-5)
+	deschis - boolean, care indica daca hotelul este dat in folosinta sau nu
+	numar_camere - de tip intreg fara semn
+	preturi - sir de preturi reprezentat printr-un pointer la float, constand in costul inchirierii unei camere pe noapte
+	
+Cerinte:
+1) Sa se defineasca structura.
+2) Sa se creeze o metoda care sa permita initializarea unui hotel transmis ca parametru.
+3) Sa se creeze o metoda pentru afisarea la consola a unui hotel
+4) Sa se defineasca, initializeze si afiseze un pointer la un hotel creat prin cerinta 2)
+5) Sa se actualizeze numele hotelui cu un nume nou dat ca parametru (folosind referinte)
+6) Sa se actualizeze numele hotelui cu un nume nou dat ca parametru (folosind pointeri)
+7) Sa se calculeze costul mediu al inchirierii unei camere in hotel pentru o noapte
