@@ -1,0 +1,21 @@
+Continuare exercitii pentru clasa Apartament
+
+1) Constructorul cu toti parametri
+
+2) Constructorul cu valori implicite
+
+3) Sa se defineasca metode de acces pentru toate atributele 
+private ale clasei.
+Obs. Acolo unde este cazul se vor defini validari.
+
+4) Crearea constructorului de copiere in clasa Apartament. 
+Folosirea lui in main.
+Constructorul de copiere aloca spatiul aferent unui obiect si 
+il initializeaza pe acesta cu valorile unui obiect existent.
+Este apelat automat in toate situatiile de:
+	-> definire + initializare obiect nou.
+	-> apel al unei functii care lucreaza cu obiecte transferate 
+	prin valoare, cand e nevoie de crearea unei copii a 
+	obiectului pe stiva.
+	-> returnarea dintr-o functie a unui obiect, prin valoare.
+	
