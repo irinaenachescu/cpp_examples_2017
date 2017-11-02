@@ -1,0 +1,19 @@
+Continuare exercitii pentru clasa Apartament
+
+1) Adaugarea unui camp static (variabila globala ce apartine 
+clasei de obiecte), numar_apartamente,care se va folosi pentru a 
+genera id-uri pentru apartamentele din aplicatie.
+Id-ul unui apartament este un atribut constant (nu este permisa
+modificarea lui odata ce a fost initializat).
+Atentie! Un atribut constant se initializeaza doar prin lista 
+de initializari a constructorului.
+
+2) Supraincarcarea operatorului= in clasa Apartament.
+In timp ce constructorul de copiere copiaza obiectul sursa
+intr-o zona neinitializata, in care isi construieste un obiect nou,
+operatorul de atribuire lucreaza cu doua obiecte deja existente,
+avand sarcina de a copia informatiile dintr-o zona in alta.
+
+3) Supraincarcarea operatorului << pentru afisarea unui aparament
+la consola. Functii friend permit accesul pe zona privata sau
+protected din afara clasei.
