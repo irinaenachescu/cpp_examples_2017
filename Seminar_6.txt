@@ -1,0 +1,12 @@
+Continuare exercitii pentru clasa Apartament
+
+1) Supraincarcarea operatorului << pentru afisarea unui aparament
+la consola. Functii friend permit accesul pe zona privata sau
+protected din afara clasei.
+
+2) Supraincarcarea operatorului >> pentru citirea unui apartament
+de la consola.
+
+3) Supraincarcarea operatorului + care aduna un numar la anul de 
+constructie al unui apartament.
+
