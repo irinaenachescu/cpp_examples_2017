@@ -1,0 +1,62 @@
+Se considera clasa Masina cu urmatoarele atribute:
+- serie -> intreg constant
+- pret -> valoare reala
+- producator -> sir de maxim 50 de caractere
+- marca -> sir de caractere alocat dinamic
+- vechime -> intreg (vechimea in ani a masinii)
+- km_parcursi -> vector alocat dinamic care retine km parcursi 
+cu masina in fiecare an
+- combustibil -> enum cu valorile: BENZINA, GPL, DIESEL
+
+Sa se implementeze in clasa toate metodele necesare astfel incat
+sa avem functional urmatorul cod in main.
+void main(){
+	Masina m1; //nu trebuie sa poata fi scris
+	Masina m2(123); //creeaza o masina cu seria 123
+	Masina* m3=new Masina(124,"Audi","A5",10500,5,v,BENZINA);
+	
+	Masina m4(125);
+	m4=*m3;
+	
+	m4.setMarca("A3");
+	m4.setCombustibil(GPL);
+	m4.setKmParcursi(3,v2);
+	cout<<m2<<*m3<<m4;
+	cout<<m4.getCombustibil();
+	
+	cout<<m4++; //creste vechimea masinii cu un an, pentru care adauga 0 km parcursi
+	cout<<++m4; //creste vechimea masinii cu un an, pentru care adauga 0 km parcursi
+	
+	m2=*m3+1000.6; //aduna 1000.6 la pretul masinii
+	
+	m4=1520.3+m2; //aduna 1520.3 la pretul masinii
+	
+	if(*m3==m4) { //doua masini sunt egale daca au acelasi producator si aceeasi marca
+		cout<<"Masinile sunt la fel!"<<endl;
+	} else {
+		cout<<"Masinile sunt diferite!"<<endl;
+	}
+	
+	if(m2>*m3) {
+		cout<<"Masina "<<m2.getSerie()<<" este mai scumpa decat masina "<<
+		m3->getSerie()<<endl;
+	}
+	
+	m4+=120; //aduna 120 la km parcursi in anul curent
+	
+	cout<<"In total in aplicatie sunt: "<<Masina::getNumarMasini()
+	<<" masini"<<endl;
+	
+	cout<<"Numarul mediu de km parcusi pe an de masina "<<
+	m2.getSerie()<<" este "<<m2.nrKmMedii()<<endl;
+	
+	cin>>m4;
+	
+	cout<<(double)m4; //afiseaza pretul masinii
+	
+	cout<<"Km parcursi in anul 2 "<<m2[1]<<endl;
+	m2[1]=15000; //modifica nr de km din anul 2 al masinii m2
+	
+	cout<<"Numarul total de km parcursi pana in anul 3 este: "
+	<<m2(3)<<endl; //operatorul functie
+}
