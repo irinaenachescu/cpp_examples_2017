@@ -1,0 +1,32 @@
+Sa se creeze clasa Restaurant cu urmatoarele atribute:
+nume - sir de caractere alocat dinamic
+deschis - variabila cu valori adevarat sau fals
+numar_meniuri - intreg
+preturi - vector alocat dinamic care inregistreaza pretul fiecarui meniu
+
+1. Sa se creeze in clasa constructorul fara parametri, constructorul cu toti
+parametrii, constructorul de copiere, operatorul=, destructorul, operatorul <<.
+
+2. Sa se supraincarce operatorul<< pentru a scrie un restaurant intr-un fisier.
+friend ofstream& operator<<(ofstream& out, Restaurant& r)
+
+3. Sa se supraincarce operatorul>> pentru a citi un restaurant dintr-un fisier.
+friend ifstream& operator>>(ifstream& in, Restaurant& r)
+
+4. Sa se testeze cu o lista de restaurante declarate in main.
+
+Atentie la citirea datelor dintr-un fisier: sa nu existe \n sau spatii la final,
+care vor fi interpretate ca date de intrare pentru un obiect nou.
+O solutie este ca in fisierul in care scrie o lista de obiecte 
+sa scriu pe prima linia numarul de obiecte, ca la deschiderea lui 
+sa stiu cate voi avea de citit.
+
+5. Sa se implementeze o metoda care scrie o lista de restaurante intr-un fisier binar.
+void generareFisierBinar(Restaurant* restaurante, int nr, char* numeFisier)
+fisier.open(numeFisier, ofstream::out | ofstream::binary);
+fisier.write((char*)&nr, sizeof(int));
+
+6. Sa se implementeze o metoda care incarca o lista de restaurante dintr-un fisier binar.
+void incarcaFisierBinar(Restaurant*& restaurante, int& nr, char* numeFisier)
+fisier.open(numeFisier, ifstream::in | ifstream::binary);
+fisier.read((char*)&nr, sizeof(int));
