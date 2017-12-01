@@ -1,0 +1,35 @@
+Mostenire
+
+O clasa (subclasa, copil, derivata) mosteneste toate atributele 
+si metodele unei alte clase (superclasa, parinte, de baza) sau 
+ale mai multor clase. Relatie de tipul IS A.
+class Baza {
+};
+
+class Derivata: [tip_derivare] Baza{
+};
+Unde tip_derivare stabileste modul de modificare a accesului la
+membrii clasei de baza din clasa derivata. Implicit e private.
+
+Observatii:
+1) Fiecare constructor este responsabil strict de zona clasei 
+pe care o reprezinta.
+Constructorii din clasa derivata apeleaza constructorii din 
+clasa de baza.
+2) Fiecare destructor e responsabil de eliberarea propriilor 
+resurse (alocate prin constructor).
+Se apeleaza incepand de jos in sus in ierarhie (cei de clasa 
+derivata, cei din clasa de baza).
+
+Exercitiu.
+1) Sa se realizeze clasa Student cu atributele:
+nume - sir de caractere alocat dinamic
+integralist - bool
+2) Sa se realizeze constructor cu si fara parametri, constructor de copiere, destructor,
+operator=, supraincarcarea operatorului <<.
+3) Sa se realizeze clasa StudentBursier care are in plus atributele:
+bursa - float
+numar_materii_preferate - intreg
+materii_preferate - vector alocat dinamic de siruri de caractere alocate dinamic.
+4) Sa se realizeze constructor cu si fara parametri, constructor de copiere, destructor,
+operator=, supraincarcarea operatorului <<.
