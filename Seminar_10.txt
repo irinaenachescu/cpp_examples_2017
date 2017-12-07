@@ -1,0 +1,64 @@
+Teorie:
+Functiile virtuale reprezinta defapt un pointer la functie.
+Fiind un pointer la functie apelul efectiv se face la momentul 
+rularii si nu la momentul compilarii.
+Apare astfel termenul de late-binding, adica la momentul 
+compilarii nu se stie inca ce metoda va fi apelata, 
+ci doar la momentul executiei se stie sigur metoda.
+
+O functie virtuala pura reprezinta o functie virtuala fara corp.
+
+Clasa abstracta este clasa care are cel putin o functie virtual 
+pura. O clasa abstracta poate contine atribute, metode normale 
+si constructori.
+
+Interfata (simulata prin clase abstracte in limbajul C++) 
+este clasa care contine doar metode virtuale pure.
+
+Upcasting
+ --> conversie pointer/referinta clasa derivata la clasa de baza
+ --> se realizeaza implicit
+
+Downcasting
+ --> conversie pointer/referinta clasa de baza la clasa derivata
+ --> se realizeaza explicit (operatorul de conversie)
+ 
+ 
+Cerinte:
+
+1. Sa se defineasca clasa abstracta Produs, cu atributele:
+denumire - sir de 50 de caractere
+pret - float
+Aceasta clasa are metoda afisare() si metoda virtuala pura getInfo(). 
+Se vor defini constructori cu si fara parametri.
+
+2. Sa se defineasca Interfata IDeVanzare cu metodele:
+float getPret()
+void aplicaDiscount(int discount)
+
+3. Sa se defineasca clasa Aliment, care mosteneste clasa Produs.
+Aceasta are in plus campul:
+termen_valabilitate (numar de zile)
+Clasa Aliment va mosteni si interfata IDeVanzare.
+Sa se scrie o varianta supraincarcata a metodei de afisare.
+
+4. Sa se defineasca clasa AparatElectrocasnic, care mosteneste clasa Produs.
+Aceasta are in plus campul:
+perioada_garantie (numar de zile)
+Clasa AparatElectrocasnic va mosteni si interfata IDeVanzare.
+
+5. Sa se creeze clasa CosCumparaturi care contine:
+nr_produse - intreg
+produse - vector alocat dinamic de pointeri la produse
+Sa se creeze constructorii (cu/fara parametri, de copiere)
+si destructorul. O metoda de afisare.
+
+6. Sa se creeze in main un cos de cumparaturi cu diverse produse.
+Sa se afiseze informatiile pentru fiecare produs in parte 
+(apelul functiei afisare, apoi apelul functiei getInfo).
+
+7. Sa se creeze in main o lista de pointeri la IDeVanzare.
+Sa se afiseze pretul obiectelor din lista.
+Sa se reduca pretul produselor cu 20%.
+
+8. Exemple upcasting si downcasting.
