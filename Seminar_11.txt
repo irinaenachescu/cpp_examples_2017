@@ -1,0 +1,29 @@
+Clase si metode template
+Cerinte:
+
+1. Sa se scrie o metoda generica de tip template (compare) prin care sa se verifice egalitatea a doua valori.
+Sa se specializeze metoda pentru tipul char*.
+template <typename T>
+
+2. Sa se scrie o metoda generica de tip template (multiply) prin care sa se inmulteasca doua valori.
+Sa se specializeze metoda pentru tipul char*. Rezultatul va fi concatenarea celor doua siruri, 
+incepand cu sirul mai lung.
+
+
+3. Sa se implementeze clasa template Cutie care are atributele:
+culoare - enum cu valorile (ROSU, VERDE, ALBASTRU)
+numar_obiecte
+obiecte T*
+Se vor defini: constructor cu toti parametrii, constructor de copiere, operator=, destructor.
+Sa se implementeze operatorul == care compara 2 cutii dupa culoare si numarul de obiecte.
+Sa se supraincarce operator<<.
+
+4. Sa se realizeze clasa Jucarie cu atributul nume, sir de 50 de caractere.
+Se vor defini constructor cu parametri, precum si operatorul de afisare la consola.
+
+5. Sa se realizeze clasa Carte cu atributele nume, sir de 25 de caractere si numar_pagini.
+Se vor defini constructor cu parametri, precum si operatorul de afisare la consola.
+
+6. In main se vor initializa si afisa 2 cutii care contin jucarii.
+Se vor compara folosind metoda template implementata la punctul 1. 
+Se va initializa si afisa o masina care contine pointeri la carti. 
